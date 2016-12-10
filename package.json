@@ -1,0 +1,22 @@
+{
+  "name": "gpu-map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-typeahead": "^2.3.2",
+    "font-awesome": "^4.7.0",
+    "geoportal-access-lib": "^1.0.0-beta5",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+  }
+}
