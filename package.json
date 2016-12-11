@@ -14,7 +14,8 @@
     "font-awesome": "^4.7.0",
     "geoportal-access-lib": "^1.0.0-beta5",
     "jquery": "^3.1.1",
-    "ol3-ext": "git+https://github.com/Viglino/ol3-ext.git#gh-pages"
+    "ol3-ext": "git+https://github.com/Viglino/ol3-ext.git#gh-pages",
+    "openlayers": "^3.20.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
