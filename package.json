@@ -13,10 +13,11 @@
     "bootstrap-typeahead": "^2.3.2",
     "font-awesome": "^4.7.0",
     "geoportal-access-lib": "^1.0.0-beta5",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "ol3-ext": "git+https://github.com/Viglino/ol3-ext.git#gh-pages"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0"
   }
 }

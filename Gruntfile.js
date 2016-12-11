@@ -11,11 +11,25 @@ module.exports = function (grunt) {
                 dest: 'web/vendor/jquery/',
                 filter: 'isFile'
             },
-            bootstrap: {
+            bootstrapJs: {
                 expand: true,
                 flatten: true,
-                src: ['node_modules/bootstrap/dist/**'],
-                dest: 'web/vendor/bootstrap/',
+                src: ['node_modules/bootstrap/dist/js/**'],
+                dest: 'web/vendor/bootstrap/js/',
+                filter: 'isFile'
+            },
+            bootstrapCss: {
+                expand: true,
+                flatten: true,
+                src: ['node_modules/bootstrap/dist/css/**'],
+                dest: 'web/vendor/bootstrap/css/',
+                filter: 'isFile'
+            },
+            bootstrapFonts: {
+                expand: true,
+                flatten: true,
+                src: ['node_modules/bootstrap/dist/fonts/**'],
+                dest: 'web/vendor/bootstrap/fonts/',
                 filter: 'isFile'
             },
             bootstrapTypeahead: {
@@ -35,7 +49,7 @@ module.exports = function (grunt) {
             geoportalAccessLib: {
                 expand: true,
                 flatten: true,
-                src: ['web/js/GpServices.js'], // attention, mis en dur dans web/js, devrait etre extrait depuis node_module
+                src: ['web/js/GpServices.js'],
                 dest: 'web/vendor/geoportal-access-lib/',
                 filter: 'isFile'
             },
@@ -51,6 +65,13 @@ module.exports = function (grunt) {
                 flatten: true,
                 src: ['node_modules/font-awesome/fonts/**'],
                 dest: 'web/vendor/font-awesome/fonts/',
+                filter: 'isFile'
+            },
+            ol3Ext: {
+                expand: true,
+                flatten: true,
+                src: ['node_modules/ol3-ext/dist/**'],
+                dest: 'web/vendor/ol3-ext/',
                 filter: 'isFile'
             }
         }

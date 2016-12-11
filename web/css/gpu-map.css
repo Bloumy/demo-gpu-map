@@ -1,0 +1,13 @@
+.ol-screen{
+    width: 800px;
+    height: 600px;
+}
+
+.ol-screen #gpu-map{
+    width: 100%;
+    height: 100%;
+}
+
+.ol-screen-switch{
+    
+}
