@@ -11,8 +11,11 @@ ol.control.ScreenSwitcherControl = function (options)
 {
     options = options || {};
     var element = $("<div>").addClass('ol-screen-switch ol-unselectable ol-control');
+    
+    if (options.screenDivId)
+        this.screen = $('#' + options.screenDivId);
+    
     var self = this;
-
     $("<button>").addClass("fa fa-expand fa-2x")
             .attr('title', 'Afficher la carte en plen écran')
             .on("touchstart click", function (e)
@@ -20,19 +23,17 @@ ol.control.ScreenSwitcherControl = function (options)
                 if (e && e.preventDefault)
                     e.preventDefault();
 
-                if (options.screenDivId) {
-
-                    if ($('#' + options.screenDivId).hasClass('ol-screen-full')) {
-                        $('#' + options.screenDivId).removeClass('ol-screen-full');
-                        $(this).addClass('fa-expand');
-                        $(this).removeClass('fa-compress');
+                
 
 
-                    } else {
-                        $('#' + options.screenDivId).addClass('ol-screen-full');
-                        $(this).removeClass('fa-expand');
-                        $(this).addClass('fa-compress');
-                    }
+                if (self.screen.hasClass('ol-screen-full')) {
+                    self.screen.removeClass('ol-screen-full');
+                    $(this).addClass('fa-expand').removeClass('fa-compress').attr('title', 'Afficher la carte en plen écran');
+
+
+                } else {
+                    self.screen.addClass('ol-screen-full');
+                    $(this).removeClass('fa-expand').addClass('fa-compress').attr('title', 'Quitter le mode plein écran');
                 }
 
                 self.getMap().updateSize();
@@ -40,8 +41,7 @@ ol.control.ScreenSwitcherControl = function (options)
             })
             .appendTo(element);
 
-    if (options.screenDivId)
-        $('#' + options.screenDivId).addClass('ol-screen');
+
 
     ol.control.Control.call(this,
             {
@@ -51,7 +51,14 @@ ol.control.ScreenSwitcherControl = function (options)
 
     setTimeout(function ()
     {
+        console.log(self.screen);
+        console.log(!self.screen);
+        if (!self.screen)
+            self.screen = $('#' + self.getMap().getTarget());
+
+        self.screen.addClass('ol-screen');
         self.getMap().updateSize();
+
     }, 0);
 
 };
