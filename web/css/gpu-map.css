@@ -1,13 +1,17 @@
+/*container de la carte*/
 .ol-screen{
     width: 800px;
     height: 600px;
 }
 
+/* carte */
 .ol-screen #gpu-map{
     width: 100%;
     height: 100%;
 }
 
-.ol-screen-switch{
-    
+/* barre de controles */
+#gpu-map .ol-bar {
+    position: absolute;
+    top: 1.5em;
 }
