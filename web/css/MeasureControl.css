@@ -1,0 +1,29 @@
+
+.measurement-results{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ol-measure-instruction,
+.ol-measure-result{
+    
+}
+
+/*controle de mesure */
+.measurement-results .ol-measure-instruction,
+.measurement-results .ol-measure-result{
+    background-color: rgba(0, 60, 136, 0.5);
+    border: medium none;
+    border-radius: 2px;
+    color: #fff;
+    padding: 2px;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.measure-on{
+    cursor: crosshair;
+}

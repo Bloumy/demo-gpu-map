@@ -54,7 +54,13 @@ function addControls(map) {
 
     var featureInfoControl;
     var drawFeaturesControl;
-    var measureControl;
+    
+    var measureControl = new ol.control.MeasureControl({
+        target: "gpu-map"
+    });
+    measureControl.setMap(map);
+    barControl.addControl(measureControl);
+    
     var printControl;
 
     // Outils de selection de couche
@@ -62,6 +68,10 @@ function addControls(map) {
     var treeLayerSwitcherControl;
 
     var legendControl;
+    
+    var permalink;
+    
+    var echelle;
 
 }
 

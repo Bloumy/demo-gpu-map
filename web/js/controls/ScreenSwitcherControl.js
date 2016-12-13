@@ -11,10 +11,10 @@ ol.control.ScreenSwitcherControl = function (options)
 {
     options = options || {};
     var element = $("<div>").addClass('ol-screen-switch ol-unselectable ol-control');
-    
+
     if (options.screenDivId)
         this.screen = $('#' + options.screenDivId);
-    
+
     var self = this;
     $("<button>").addClass("fa fa-expand fa-2x")
             .attr('title', 'Afficher la carte en plen écran')
@@ -23,7 +23,7 @@ ol.control.ScreenSwitcherControl = function (options)
                 if (e && e.preventDefault)
                     e.preventDefault();
 
-                
+
 
 
                 if (self.screen.hasClass('ol-screen-full')) {
@@ -51,8 +51,6 @@ ol.control.ScreenSwitcherControl = function (options)
 
     setTimeout(function ()
     {
-        console.log(self.screen);
-        console.log(!self.screen);
         if (!self.screen)
             self.screen = $('#' + self.getMap().getTarget());
 
